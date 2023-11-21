@@ -1,17 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="profile-header">
+    <ion-img class="profile-image" src="assets/profile-picture.jpg"></ion-img>
+    <h2 class="profile-name">{{ userProfile.username }}</h2>
+    <p class="profile-followers">Seguidores: {{ userProfile.followers }}</p>
+    <ion-button expand="full" color="primary" (click)="toggleFollow()">
+      {{ userProfile.isFollowing ? 'Dejar de seguir' : 'Seguir' }}
+    </ion-button>
+  </div>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="musical-notes"></ion-icon>
+      <ion-label>Música favorita: {{ userProfile.favoriteMusic }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="calendar"></ion-icon>
+      <ion-label>Fecha de nacimiento: {{ userProfile.birthdate }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="globe"></ion-icon>
+      <ion-label>Ubicación: {{ userProfile.location }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+

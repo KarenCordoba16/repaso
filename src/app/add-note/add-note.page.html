@@ -1,0 +1,25 @@
+<!-- src/app/add-note/add-note.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add Note
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Title</ion-label>
+    <ion-input [(ngModel)]="title" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Content</ion-label>
+    <ion-textarea [(ngModel)]="content" required></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" (click)="saveNote()">Save Note</ion-button>
+</ion-content>

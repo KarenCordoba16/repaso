@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +9,25 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  @ViewChild(IonContent)
+  content!: IonContent;
+
+  scrollToBottom() {
+    this.content.scrollToBottom(500);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(500);
+  }
+
+  photos: Array<string> = [
+    'assets/fotos/Sebastian-Yatra.jpg',
+    'assets/fotos/Michael-Jackson.jpg',
+    'assets/fotos/Sofia-Reyes.jfif',
+    'assets/fotos/Becky-G.jfif'
+
+  ];
+
+  // constructor() {}
 
 }
