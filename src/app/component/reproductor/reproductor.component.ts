@@ -10,42 +10,57 @@ import { Component, OnInit } from '@angular/core';
 export class ReproductorComponent  implements OnInit {
   audioFiles: string[] = [];
   audio = new Audio();
+  currentIndex: number = 0;
 
   songs: any[] = [
     {
       nombre: 'Me voy enamorando - ',
-      artista: 'Chino & Nacho'
+      artista: 'Chino & Nacho',
     },
     {
-
+      nombre: 'La Gozadera - ',
+      artista: 'Gente de Zona',
+    },
+    {
+      nombre: 'Reggaeton Lento - ',
+      artista: 'CNCO',
+    },
+    {
+      nombre: 'Despacito - ',
+      artista: 'Luis Fonsi',
+    },
+    {
+      nombre: 'Hey DJ - ',
+      artista: 'CNCO',
+    },
+    {
+      nombre: 'New Divide - ',
+      artista: 'Linkin Park',
     },
   ]
 
   constructor() {
     this.cargarArchivosDeAudio();
-    // this.audio.src = '../../../assets/audio';
+
   }
 
   cargarArchivosDeAudio() {
-    const numeroDeArchivos = 6; // Cambia esto según la cantidad de archivos que tengas
+    const numeroDeArchivos = 6; 
 
-    // Utilizamos un ciclo for para construir los nombres de los archivos
     for (let i = 1; i <= numeroDeArchivos; i++) {
-      const nombreArchivo = `audio${i}.mp3`; // Asumiendo que los archivos tienen nombres como "audio1.mp3", "audio2.mp3", etc.
+      const nombreArchivo = `audio${i}.mp3`; 
       this.audioFiles.push(nombreArchivo);
     }
 
-    // Cargamos el primer archivo de audio
-    this.cargarAudio(0);
+
+    this.cargarAudio(this.currentIndex);
   }
 
   cargarAudio(indice: number) {
-    if (indice < this.audioFiles.length) {
+    if (indice >= 0 && indice < this.audioFiles.length) {
       const rutaArchivo = `../../../assets/audio/${this.audioFiles[indice]}`;
       this.audio.src = rutaArchivo;
       this.audio.load();
-
-      // Puedes agregar más lógica aquí si es necesario
 
       console.log(`Archivo cargado: ${rutaArchivo}`);
     } else {
@@ -55,26 +70,24 @@ export class ReproductorComponent  implements OnInit {
 
   play() {
     this.audio.play();
+    this.songs.length;
   }
 
   pause() {
     this.audio.pause();
   }
   next() {
-    this.audioFiles.length = (this.audioFiles.length + 1) % this.audioFiles.length;
-    // this.audio.src = this.audioFiles
-    
-    
-    
+    this.currentIndex = (this.currentIndex + 1) % this.audioFiles.length;
+    this.cargarAudio(this.currentIndex);
+    this.play();
+  }
+
+  previous() {
+    this.currentIndex = (this.currentIndex - 1 ) % this.audioFiles.length;
+    this.cargarAudio(this.currentIndex);
+    this.play();
   }
   ngOnInit() {}
 
 }
 
-// currentSongIndex = 0;
-
-// playNextSong() {
-//   this.songs[this.currentSongIndex].pause();
-//   this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
-//   this.songs[this.currentSongIndex].play();
-// }

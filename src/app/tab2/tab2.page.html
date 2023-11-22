@@ -4,11 +4,14 @@
       <ion-icon name="person-circle"></ion-icon> Mi perfil</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-header [translucent]="true">
+  <ion-searchbar></ion-searchbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
-  
-    <h2>Revive tus mejores momentos con la música que más te gusta</h2>
+  <ion-header collapse="condense"></ion-header>
+    <h2>Revive tus mejores momentos con tus artistas favoritos</h2>
   <div class="ion-padding">
     <ion-button fill="clear" (click)="scrollToBottom()"><ion-icon name="chevron-down"></ion-icon></ion-button>
 
