@@ -3,6 +3,10 @@ ion-content {
     background-size:auto;
     color: #ffffff;
     width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+
   }
   
   .form-container {
@@ -49,11 +53,13 @@ ion-content {
 
   
   ion-card {
-    width: 90%; 
     --background:black;
-    height: 50%;
+    height: 60%;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
-  
+
   ion-footer {
     text-align: center;
   }

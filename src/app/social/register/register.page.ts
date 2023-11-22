@@ -36,13 +36,14 @@ export class RegisterPage {
   
   loginFormSubmit(): void {
 
-    const usuarioEncontrado = this.usuario.find((u) => u.email === this.usuarioAgregar.email);
+    const usuarioEncontrado = this.usuario.find((u)  => u.email === this.usuarioAgregar.email);
 
     if (usuarioEncontrado && usuarioEncontrado.password === this.usuarioAgregar.password) {
-      // Usuario autenticado, redirige a la página principal
-      this.router.navigate(['/home']);
+      alert('¡Acceso concedido!')
+      this.router.navigate(['../tabs/']);
+
     } else {
-      // Credenciales incorrectas, muestra un mensaje de error
+
       alert('Acceso denegado, inténtelo nuevamente');
     }
   }

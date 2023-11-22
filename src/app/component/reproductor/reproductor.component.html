@@ -1,0 +1,21 @@
+<ion-card>
+  <ion-item>
+    <ion-title *ngFor="let cancion of songs">{{ cancion.nombre }} {{ cancion.artista }}</ion-title>
+  </ion-item>
+
+  <ion-button fill="clear" (click)="play()">
+    <ion-icon name="play"></ion-icon>
+  </ion-button>
+
+  <ion-button fill="clear" (click)="pause()">
+    <ion-icon name="pause"></ion-icon>
+  </ion-button>
+
+  <ion-button fill="clear">
+    <ion-icon name="play-back"></ion-icon>
+  </ion-button>
+
+  <ion-button fill="clear" (click)="next()">
+    <ion-icon name="play-forward"></ion-icon>
+  </ion-button>
+</ion-card>

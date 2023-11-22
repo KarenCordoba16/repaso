@@ -15,12 +15,13 @@ const routes: Routes = [
   },
   {
     path: '',
+    loadChildren: () => import('./social/register/register.module').then( m => m.RegisterPageModule)
+  },  
+  {
+    path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
-  {
-    path: 'i',
-    loadChildren: () => import('./social/register/register.module').then( m => m.RegisterPageModule)
-  },
+
 
   {
     path: 'notas',
