@@ -10,6 +10,7 @@ export class ReproductorComponent  implements OnInit {
   audioFiles: string[] = [];
   audio = new Audio();
   currentIndex: number = 0;
+  currentSong: any = {};
 
   songs: any[] = [
     {
@@ -60,6 +61,7 @@ export class ReproductorComponent  implements OnInit {
       const rutaArchivo = `../../../assets/audio/${this.audioFiles[indice]}`;
       this.audio.src = rutaArchivo;
       this.audio.load();
+      this.currentSong = this.songs[indice];
 
       console.log(`Archivo cargado: ${rutaArchivo}`);
     } else {

@@ -16,7 +16,7 @@ export class Tab1Page {
       image: 'URL de la imagen 1',
     },
     {
-      name: 'Rock',
+      name: 'Rock & Roll',
       image: 'URL de la imagen 2',
     },
     {
@@ -41,6 +41,22 @@ export class Tab1Page {
     },
     {
       name: 'Rap',
+      image: 'URL de la imagen 2',
+    },
+    {
+      name: 'Latinos',
+      image: 'URL de la imagen 2',
+    },
+    {
+      name: 'Salsa',
+      image: 'URL de la imagen 2',
+    },
+    {
+      name: 'Metal',
+      image: 'URL de la imagen 2',
+    },
+    {
+      name: 'Románticas',
       image: 'URL de la imagen 2',
     },
   ];

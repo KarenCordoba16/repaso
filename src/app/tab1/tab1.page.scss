@@ -20,3 +20,29 @@ ion-header {
     width: 10%;
     margin-right: auto;
 }
+ion-row.ion-text-start ion-col {
+    align-items: flex-start;
+    text-align: start;
+}
+
+h2 {
+    text-align: start;
+}
+
+ion-thumbnail {
+    
+    align-items: flex-start;
+}
+
+ion-button {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+ion-label {
+    align-items: flex-start;
+    text-align: start;
+}
+
+ion-toolbar{
+    align-items: flex-start;
+}

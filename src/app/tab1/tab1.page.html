@@ -36,8 +36,7 @@
 
     <ion-grid>
       <h2>Géneros musicales</h2>
-      <ion-row>
-
+      <ion-row class="ion-text-start">
         <ion-col size="6" *ngFor="let playlist of playlists" lines="full">
           <ion-button color="dark" expand="full" fill="clear">
             <ion-thumbnail slot="start">
@@ -45,7 +44,6 @@
             </ion-thumbnail>
             <ion-label class="ion-text-wrap">
               <h2>{{ playlist.name }}</h2>
-              <p>{{ playlist.description }}</p>
             </ion-label>
           </ion-button>  
         </ion-col>
