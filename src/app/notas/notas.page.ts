@@ -22,4 +22,7 @@ export class NotasPage {
   addNote() {
     this.router.navigate(['/add-note']);
   }
+  back() {
+    this.router.navigate(['/tabs/tab2'])
+  }
 }

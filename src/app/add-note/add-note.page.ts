@@ -16,10 +16,10 @@ export class AddNotePage {
   saveNote() {
     if (this.title && this.content) {
       this.notesService.addNote(this.title, this.content);
-      this.router.navigate(['/notes']);
+      this.router.navigate(['/notas']);
     }
   }
   back() {
-    this.router.navigate(['/notes'])
+    this.router.navigate(['/notas'])
   }
 }

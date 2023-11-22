@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, EventEmitter, Output, OnInit } from '@angular/core';
 import { IonContent } from '@ionic/angular';
-
+import { Router } from '@angular/router';
+import { NotasPage } from '../notas/notas.page';
 
 @Component({
   selector: 'app-tab2',
@@ -28,7 +29,11 @@ export class Tab2Page {
 
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  publicaciones() {
+    this.router.navigate(['../notas/'])
+  }
 
 }
 
