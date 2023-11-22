@@ -13,42 +13,34 @@ export class Tab1Page {
   playlists: any[] = [
     {
       name: 'Pop',
-      description: 'Descripción de la canción',
       image: 'URL de la imagen 1',
     },
     {
       name: 'Rock',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
     {
       name: 'Cumbia',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
     {
       name: 'Cuarteto',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
     {
       name: 'Reggaeton',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
     {
       name: 'Rock & Pop',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
     {
       name: 'Trap',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
     {
       name: 'Rap',
-      description: 'Descripción de la Playlist 2',
       image: 'URL de la imagen 2',
     },
   ];

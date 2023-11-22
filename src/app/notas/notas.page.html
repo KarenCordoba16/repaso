@@ -1,30 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Notes
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let note of notes">
-      <ion-label>
-        <h2>{{ note.title }}</h2>
-        <p>{{ note.content }}</p>
-      </ion-label>
-      <ion-button (click)="deleteNote(note.id)" slot="end" fill="clear">
-        <ion-icon name="trash"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
-</ion-content>
 
 <!-- src/app/notes/notes.page.html -->
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Notes
+      Crear publicación
     </ion-title>
   </ion-toolbar>
 </ion-header>

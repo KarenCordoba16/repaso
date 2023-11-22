@@ -1,8 +1,5 @@
 <ion-card>
-    <ion-item>
-      <ion-title *ngFor="let cancion of songs">{{ cancion.nombre }} {{ cancion.artista }}</ion-title>
-
-
+  <ion-item>
     <ion-button fill="clear">
       <ion-icon name="play-back"></ion-icon>
     </ion-button>
@@ -19,4 +16,7 @@
       <ion-icon name="play-forward"></ion-icon>
     </ion-button>
   </ion-item>  
+  <ion-item>
+    <ion-title *ngFor="let cancion of songs">{{ cancion.nombre }} {{ cancion.artista }}</ion-title>
+  </ion-item>
 </ion-card>

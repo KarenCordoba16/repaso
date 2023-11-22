@@ -7,7 +7,7 @@ import { Tab2Page } from './tab2/tab2.page';
 
 const routes: Routes = [
   { path: 'inicioNotas', redirectTo: 'notas', pathMatch: 'full' },
-  { path: 'notes', component: NotasPage },
+  { path: 'notas', component: NotasPage },
   { path: 'add-note', component: AddNotePage },
   {
     path: 'tab2',

@@ -19,4 +19,7 @@ export class AddNotePage {
       this.router.navigate(['/notes']);
     }
   }
+  back() {
+    this.router.navigate(['/notes'])
+  }
 }

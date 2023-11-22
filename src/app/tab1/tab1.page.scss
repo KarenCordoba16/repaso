@@ -2,19 +2,21 @@ ion-content {
     justify-content: center;
     background-size: cover;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
-    width: 10%;
+    width: 50%;
     margin-left: auto;
 }
 ion-header {
     background-color: black;
 }
 
-ion-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.profile-image {
+    width: 10%;
+    margin-right: auto;
 }

@@ -1,25 +1,28 @@
-<!-- src/app/add-note/add-note.page.html -->
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+    <ion-button (click)="back()" fill="clear" slot="start">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
     <ion-title>
-      Add Note
+      Publicación
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label position="stacked">Title</ion-label>
-    <ion-input [(ngModel)]="title" type="text" required></ion-input>
-  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input label="Asunto" [(ngModel)]="title" type="text" required></ion-input>
+        </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Content</ion-label>
-    <ion-textarea [(ngModel)]="content" required></ion-textarea>
-  </ion-item>
+        <ion-item>
+          <ion-input label="¿Qué estás pensando?" type="text-area" [(ngModel)]="content" required></ion-input>
+        </ion-item>
 
-  <ion-button expand="full" (click)="saveNote()">Save Note</ion-button>
+        <ion-button fill="clear" expand="full" (click)="saveNote()">PUBLICAR</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
